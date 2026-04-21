@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Badges & verdict chips</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .chip2 { font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; }
+  .tier { font-family: var(--font-display); font-weight: 700; font-size: 18px; width: 40px; height: 40px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">Verdict chips &amp; tier badges</div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+    <span class="chip2" style="background:rgba(93,202,165,0.15);color:#5dcaa5;border:1px solid rgba(93,202,165,0.35)">● Pro</span>
+    <span class="chip2" style="background:rgba(240,153,123,0.15);color:#f0997b;border:1px solid rgba(240,153,123,0.35)">● Con</span>
+    <span class="chip2" style="background:rgba(60,229,229,0.12);color:#3ce5e5;border:1px solid rgba(60,229,229,0.4)">● Watching</span>
+    <span class="chip2" style="background:rgba(255,255,255,0.06);color:#8791b4;border:1px solid rgba(255,255,255,0.12)">Meh</span>
+    <span class="chip2" style="background:var(--accent);color:#0f1524">S-tier pick</span>
+    <span class="chip2" style="background:transparent;color:#f5f7fb;border:1px solid rgba(255,255,255,0.2)">New · ep 42</span>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <span class="tier" style="background:#3ce5e5;color:#0f1524">S</span>
+    <span class="tier" style="background:#5dcaa5;color:#0f1524">A</span>
+    <span class="tier" style="background:#b5f5f5;color:#0f1524">B</span>
+    <span class="tier" style="background:#2b375a;color:#f5f7fb">C</span>
+    <span class="tier" style="background:#f0997b;color:#0f1524">D</span>
+    <span class="tier" style="background:#d77553;color:#0f1524">F</span>
+    <span style="font-family:var(--font-mono);font-size:11px;color:var(--fg-3);margin-left:12px">S/A/B/C/D/F — never stars</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* Shared styles for preview cards — each card is a self-contained HTML file
+   sized to render at ~700×N in the Design System tab. */
+@import url("../colors_and_type.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-stage);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 700px;
+  padding: 28px 32px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card.paper {
+  background: var(--paper-500);
+  color: var(--ink-900);
+}
+
+.card .eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.card.paper .eyebrow { color: var(--teal-600); }
+
+.row { display: flex; gap: 12px; align-items: center; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.swatch .chip {
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid var(--border-1);
+}
+.swatch .name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--fg-1);
+}
+.card.paper .swatch .name { color: var(--ink-900); }
+.swatch .hex {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  letter-spacing: 0.02em;
+}
+.card.paper .swatch .hex { color: var(--ink-500); }

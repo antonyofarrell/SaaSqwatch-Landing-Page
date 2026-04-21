@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form inputs</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .field { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .label { font-family: var(--font-display); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-3); }
+  .inp { font-family: var(--font-body); font-size: 14px; background: var(--bg-inset); border: 1px solid var(--border-2); color: var(--fg-1); padding: 10px 14px; border-radius: 10px; outline: none; }
+  .inp:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(60,229,229,0.35); }
+  .inp::placeholder { color: var(--fg-3); }
+  .sel { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--bg-inset); border: 1px solid var(--border-2); border-radius: 10px; color: var(--fg-1); font-size: 14px; }
+  .check { width: 18px; height: 18px; border-radius: 5px; background: var(--accent); display: inline-flex; align-items: center; justify-content: center; color: #0f1524; font-size: 12px; font-weight: 800; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">Inputs · text / search / select / checkbox</div>
+  <div style="display:flex;gap:12px;margin-bottom:12px">
+    <div class="field"><span class="label">Search tools</span><input class="inp" placeholder="e.g. Notion, Linear, Figma…" value="Linear"></div>
+    <div class="field"><span class="label">Category</span><div class="sel">Project mgmt <span style="margin-left:auto;color:var(--fg-3)">▾</span></div></div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--fg-1)"><span class="check">✓</span> Video</label>
+    <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--fg-2)"><span style="width:18px;height:18px;border-radius:5px;border:1.5px solid var(--border-2)"></span> Article</label>
+    <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--fg-2)"><span style="width:18px;height:18px;border-radius:999px;border:1.5px solid var(--accent);display:inline-flex;align-items:center;justify-content:center"><span style="width:8px;height:8px;border-radius:999px;background:var(--accent)"></span></span> S-tier only</label>
+    <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--fg-2)"><span style="width:34px;height:20px;border-radius:999px;background:var(--accent);position:relative"><span style="position:absolute;right:2px;top:2px;width:16px;height:16px;border-radius:999px;background:#0f1524"></span></span> Show affiliate</label>
+  </div>
+</div>
+</body>
+</html>

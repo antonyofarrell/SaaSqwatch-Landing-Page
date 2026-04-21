@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Buttons</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .btn { font-family: var(--font-display); font-weight: 600; font-size: 14px; letter-spacing: 0.01em; border: 0; border-radius: 999px; padding: 12px 22px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .btn.primary { background: var(--accent); color: var(--fg-on-teal); }
+  .btn.primary:hover { background: var(--teal-400); }
+  .btn.secondary { background: transparent; color: var(--fg-1); border: 1px solid var(--border-2); }
+  .btn.secondary:hover { background: rgba(255,255,255,0.04); }
+  .btn.ghost { background: transparent; color: var(--accent); padding-left: 10px; padding-right: 10px;}
+  .btn.ghost:hover { color: var(--teal-400); }
+  .btn.danger { background: transparent; color: var(--caution-500); border: 1px solid var(--caution-500); }
+  .btn.disabled { opacity: 0.4; cursor: not-allowed; background: var(--navy-500); color: var(--fg-2); }
+  .btn.sm { font-size: 12px; padding: 8px 14px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">Buttons · All sizes &amp; states</div>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+    <button class="btn primary">Watch teardown</button>
+    <button class="btn secondary">See scorecard</button>
+    <button class="btn ghost">Read more →</button>
+    <button class="btn danger">Skip this one</button>
+    <button class="btn disabled">Locked</button>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <button class="btn primary sm">Subscribe</button>
+    <button class="btn secondary sm">Share</button>
+    <button class="btn ghost sm">Filter</button>
+    <span style="font-family:var(--font-mono);font-size:11px;color:var(--fg-3);margin-left:8px">pill · 12/14 inset · hover = teal-400 · press = teal-600 · focus ring = 3px teal@45%</span>
+  </div>
+</div>
+</body>
+</html>

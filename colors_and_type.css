@@ -1,0 +1,284 @@
+/* ==========================================================================
+   SaaSqwatch — Colors & Type
+   --------------------------------------------------------------------------
+   Brand tokens for the SaaSqwatch review channel — "we track the best (and
+   worst) SaaS so you can stop guessing." Tuned for a confident, late-night
+   review-show vibe on a deep navy stage with a watchful teal spotlight.
+   ========================================================================== */
+
+/* ---------- Fonts ---------- */
+/* Primary display/UI: Space Grotesk (rounded geometric, matches the logo) */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("fonts/SpaceGrotesk-Variable.woff2") format("woff2-variations"),
+       url("https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUUM.woff2") format("woff2");
+}
+
+/* Body/long-form: Inter for review copy. Fallback to system */
+@font-face {
+  font-family: "InterLocal";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_nVMrMxCp50ojIw2boKoduKmMEVuGKYAZ9hiA.woff2") format("woff2");
+}
+
+/* Mono: JetBrains Mono — used for spec chips, version tags, code callouts */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOl2V.woff2") format("woff2");
+}
+
+:root {
+  /* ================= Colors — raw palette ================= */
+  /* Brand core (supplied by brand) */
+  --qwatch-teal:     #3ce5e5;   /* Primary accent, logo mark */
+  --deep-navy:       #1a2235;   /* Dark stage background */
+  --mint:            #5dcaa5;   /* Secondary / "pro" highlight */
+  --caution:         #f0997b;   /* Warning / cons / "watch out" */
+  --paper:           #f1efe8;   /* Light warm surface */
+
+  /* Extended scale — built from brand core */
+  --navy-900:        #0f1524;   /* Near-black, deepest bg */
+  --navy-800:        #1a2235;   /* Deep Navy (brand) */
+  --navy-700:        #222c44;   /* Card on navy */
+  --navy-600:        #2b375a;   /* Elevated card on navy */
+  --navy-500:        #3a4872;   /* Muted borders / dividers */
+  --navy-400:        #5a6791;   /* Muted text on navy */
+  --navy-300:        #8791b4;   /* Secondary text on navy */
+
+  --teal-600:        #20b8b8;   /* Pressed teal */
+  --teal-500:        #3ce5e5;   /* Qwatch Teal */
+  --teal-400:        #6eeded;   /* Hover teal */
+  --teal-200:        #b5f5f5;   /* Soft tint */
+  --teal-50:         #e8fafa;
+
+  --mint-600:        #3ea985;
+  --mint-500:        #5dcaa5;
+  --mint-200:        #bfe8d8;
+
+  --caution-600:     #d77553;
+  --caution-500:     #f0997b;
+  --caution-200:     #fad3c3;
+
+  --paper-500:       #f1efe8;   /* Warm paper */
+  --paper-400:       #e4e1d6;   /* Paper border */
+  --paper-300:       #cfcbba;
+
+  --ink-900:         #121a2b;   /* Near-black on paper */
+  --ink-700:         #39405a;
+  --ink-500:         #6c748f;
+  --ink-400:         #9099ae;
+
+  /* ================= Semantic — Dark stage (default) ================= */
+  --bg-stage:        var(--navy-800);      /* Page */
+  --bg-panel:        var(--navy-700);      /* Card */
+  --bg-elevated:     var(--navy-600);      /* Modal / popover */
+  --bg-inset:        var(--navy-900);      /* Sunken / code */
+
+  --fg-1:            #f5f7fb;              /* Primary text */
+  --fg-2:            var(--navy-300);      /* Secondary text */
+  --fg-3:            var(--navy-400);      /* Tertiary / meta */
+  --fg-on-teal:      var(--navy-900);      /* Text on teal fills */
+
+  --border-1:        rgba(255,255,255,0.08);
+  --border-2:        rgba(255,255,255,0.14);
+  --border-strong:   var(--navy-500);
+
+  --accent:          var(--teal-500);
+  --accent-hover:    var(--teal-400);
+  --accent-press:    var(--teal-600);
+
+  --pro:             var(--mint-500);      /* "pro" / positive */
+  --con:             var(--caution-500);   /* "con" / warn */
+  --neutral-chip:    var(--navy-500);
+
+  --focus-ring:      0 0 0 3px rgba(60, 229, 229, 0.45);
+
+  /* ================= Type ================= */
+  --font-display:    "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:       "InterLocal", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:       "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Type scale (1.25 major third, anchored at 16px) */
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-30: 1.875rem;
+  --fs-36: 2.25rem;
+  --fs-48: 3rem;
+  --fs-64: 4rem;
+  --fs-80: 5rem;
+
+  /* Line heights */
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-normal: 1.45;
+  --lh-loose:  1.6;
+
+  /* Letter spacing */
+  --tracking-eyebrow: 0.14em;   /* SECTION LABELS */
+  --tracking-caps:    0.04em;
+  --tracking-display: -0.02em;  /* Big titles — tight like the logo */
+  --tracking-body:    0;
+
+  /* ================= Spacing / radii / shadow ================= */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.25);
+  --shadow-md:  0 6px 18px rgba(0,0,0,0.35);
+  --shadow-lg:  0 18px 48px rgba(0,0,0,0.45);
+  --shadow-glow: 0 0 0 1px rgba(60,229,229,0.35), 0 8px 32px rgba(60,229,229,0.18);
+
+  --grain-opacity: 0.04;   /* Subtle late-night film grain overlay */
+}
+
+/* ---------- Light-surface variant (Paper theme) ---------- */
+[data-theme="paper"] {
+  --bg-stage:      var(--paper-500);
+  --bg-panel:      #ffffff;
+  --bg-elevated:   #ffffff;
+  --bg-inset:      var(--paper-400);
+
+  --fg-1:          var(--ink-900);
+  --fg-2:          var(--ink-700);
+  --fg-3:          var(--ink-500);
+  --fg-on-teal:    var(--navy-900);
+
+  --border-1:      rgba(18, 26, 43, 0.08);
+  --border-2:      rgba(18, 26, 43, 0.14);
+  --border-strong: var(--paper-300);
+}
+
+/* ================= Semantic element styles ================= */
+html, body {
+  background: var(--bg-stage);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display hierarchy — Space Grotesk, tight tracking, heavy weight */
+.sq-display-xl,
+h1.sq {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(var(--fs-48), 6vw, var(--fs-80));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+.sq-display-lg,
+h2.sq {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(var(--fs-36), 4vw, var(--fs-48));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+.sq-display-md,
+h3.sq {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-30);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+}
+.sq-heading,
+h4.sq {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-20);
+  line-height: var(--lh-snug);
+  letter-spacing: 0;
+}
+
+.sq-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--accent);
+}
+
+p.sq, .sq-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-loose);
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+
+.sq-lede {
+  font-family: var(--font-body);
+  font-size: var(--fs-20);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+}
+
+.sq-meta, small.sq {
+  font-family: var(--font-body);
+  font-size: var(--fs-13);
+  color: var(--fg-3);
+}
+
+code.sq, .sq-code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bg-inset);
+  border: 1px solid var(--border-1);
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius-xs);
+  color: var(--accent);
+}
+
+.sq-spec {
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--fg-3);
+}
+
+/* Links */
+a.sq, .sq-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(60, 229, 229, 0.3);
+  transition: color 120ms ease, border-color 120ms ease;
+}
+a.sq:hover, .sq-link:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}

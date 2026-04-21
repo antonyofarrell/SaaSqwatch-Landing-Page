@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Semantic tokens</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .tok { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .tok .item { background: var(--bg-inset); border-radius: 8px; padding: 12px 14px; display:flex; align-items:center; gap: 10px; border:1px solid var(--border-1); }
+  .tok .dot { width: 18px; height: 18px; border-radius: 6px; border: 1px solid var(--border-2); flex:none; }
+  .tok .k { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); }
+  .tok .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); margin-left:auto; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">Semantic tokens · Dark stage</div>
+  <div class="tok">
+    <div class="item"><div class="dot" style="background:#1a2235"></div><div class="k">--bg-stage</div></div>
+    <div class="item"><div class="dot" style="background:#222c44"></div><div class="k">--bg-panel</div></div>
+    <div class="item"><div class="dot" style="background:#2b375a"></div><div class="k">--bg-elevated</div></div>
+    <div class="item"><div class="dot" style="background:#0f1524"></div><div class="k">--bg-inset</div></div>
+    <div class="item"><div class="dot" style="background:#f5f7fb"></div><div class="k">--fg-1</div></div>
+    <div class="item"><div class="dot" style="background:#8791b4"></div><div class="k">--fg-2</div></div>
+    <div class="item"><div class="dot" style="background:#5a6791"></div><div class="k">--fg-3</div></div>
+    <div class="item"><div class="dot" style="background:#3ce5e5"></div><div class="k">--accent</div></div>
+    <div class="item"><div class="dot" style="background:#5dcaa5"></div><div class="k">--pro</div></div>
+    <div class="item"><div class="dot" style="background:#f0997b"></div><div class="k">--con</div></div>
+    <div class="item"><div class="dot" style="background:rgba(255,255,255,0.08);outline:1px solid #222c44"></div><div class="k">--border-1</div></div>
+    <div class="item"><div class="dot" style="background:rgba(60,229,229,0.45);outline:1px solid #3ce5e5"></div><div class="k">--focus-ring</div></div>
+  </div>
+</div>
+</body>
+</html>
